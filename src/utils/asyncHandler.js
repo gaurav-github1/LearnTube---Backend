@@ -1,8 +1,4 @@
-/**
- * Async handler to wrap async route handlers and pass errors to Express error middleware
- * @param {function} fn - The async route handler function
- * @returns {function} - Middleware function that catches errors
- */
+
 const asyncHandler = (fn) => async(req, res, next) => {
     try {
         await fn(req, res, next);

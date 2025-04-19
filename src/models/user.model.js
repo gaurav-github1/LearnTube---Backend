@@ -32,8 +32,14 @@ const userSchema = new mongoose.Schema(
       type: String, // URL from cloudinary
       required: true,
     },
+    avatarPublicId: {
+      type: String, // Cloudinary public ID for avatar
+    },
     coverImage: {
       type: String, // URL from cloudinary
+    },
+    coverImagePublicId: {
+      type: String, // Cloudinary public ID for cover image
     },
     watchHistory: [
       {
